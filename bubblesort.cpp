@@ -1,15 +1,19 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void bubbles(int arr[], int s) {
+void bubbles(int arr[], int s)
+{
     int temp, count = 0;
-    bool d;
 
-    for (int i = 0; i < s - 1; i++) {
-        d = false;
-        for (int j = 0; j < s - i - 1; j++) {
+    for (int i = 0; i < s; i++)
+    {
+        bool d = false;
+
+        for (int j = 0; j < s - i - 1; j++)
+        {
             count++;
-            if (arr[j] > arr[j + 1]) {
+            if (arr[j] > arr[j + 1])
+            {
                 // swap by temporary variable
                 temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -17,36 +21,47 @@ void bubbles(int arr[], int s) {
                 d = true;
             }
         }
-        if (d==false) {
-            break;                   // Optimization bnane k liye : Because array is already sorted
+        if (d == false)
+        {
+            break; // Optimization bnane k liye : Because array is already sorted
         }
     }
 
     cout << "Counter hit: " << count << endl;
 }
 
-int main() {
+int main()
+{
     int s;
     cout << "Enter the size of array : ";
     cin >> s;
 
-    if (s <= 0) {
+    if (s <= 0)
+    {
         cout << "Please enter a valid size." << endl;
-    } else if (s < 2) {
+    }
+    else if (s < 2)
+    {
         cout << "Please enter a size greater than or equal to 2" << endl;
-    } else if (s > 10) {
+    }
+    else if (s > 10)
+    {
         cout << "Overflow of array." << endl;
-    } else {
-        int arr[s]; 
+    }
+    else
+    {
+        int arr[s];
         cout << "Enter " << s << " elements:\n";
-        for (int i = 0; i < s; i++) {
+        for (int i = 0; i < s; i++)
+        {
             cin >> arr[i];
         }
 
         bubbles(arr, s);
 
         cout << "Sorted array ";
-        for (int i = 0; i < s; i++) {
+        for (int i = 0; i < s; i++)
+        {
             cout << arr[i] << " ";
         }
         cout << endl;
