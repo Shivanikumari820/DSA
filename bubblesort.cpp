@@ -7,7 +7,7 @@ void bubbles(int arr[], int s)
 
     for (int i = 0; i < s; i++)
     {
-        bool d = false;
+        int d = 0 ;
 
         for (int j = 0; j < s - i - 1; j++)
         {
@@ -18,10 +18,13 @@ void bubbles(int arr[], int s)
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
-                d = true;
+                // d = true;
+                d = 1;
             }
         }
-        if (d == false)
+        // if (d == false)
+        if(d == 0)
+
         {
             break; // Optimization bnane k liye : Because array is already sorted
         }
