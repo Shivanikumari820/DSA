@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
 //Print factorial of any number using recursion  --->>
 // int fact (int a) {
@@ -16,7 +16,7 @@ using namespace std;
 //     cout<<"enter no.: ";
 //     cin>>a;
 //     cout<<"Result: "<<fact(a);
-
+  
 
 //Print Table of any number using recursion  --->>
 // void table(int n, int i = 1){
@@ -54,5 +54,5 @@ using namespace std;
 //     cout<<"enter exponent: ";
 //     cin>>exponent;
 //     cout<< "Result: " <<power(base,exponent);
-    return 0;
-}
+//     return 0;
+// }
