@@ -21,7 +21,7 @@
 //Print Table of any number using recursion  --->>
 // void table(int n, int i = 1){
 //     if(i>10) {
-//         return ;                        //base case 
+//         return ;                         //base case 
 //     }
 
 //    cout<<n<< " * " <<i<<" = " <<n*i<<endl;
