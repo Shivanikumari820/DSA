@@ -10,31 +10,27 @@
 // IT IS STABLE
 // selection sort
 
+
 #include <iostream>
 using namespace std;
-int main()
+
+void selection(int arr[], int s)
 {
-    int arr[] = {2, 1, 7, 9, 5};
-    int chotu;
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int count = 0;
 
-    for (int i = 0; i < n; i++)
+    int j;
+    for (int i = 0; i < s - 1; i++)
     {
-        cout << arr[i] << "\t";
-    }
-    cout << "\n";
-
-    for (int i = 0; i < n; i++)
-    {
-        chotu = i;
-        for (int j = i + 1; j < n; j++)
+        int chotu = i;
+        count++;
+        for (j = i + 1; j < s; j++)
         {
-            if (arr[chotu] > arr[j])
+            if (arr[j] < arr[chotu])
             {
                 chotu = j;
             }
         }
-        if (chotu != i)
+        if (chotu != j)
         {
             int tmp;
             tmp = arr[chotu];
@@ -42,10 +38,26 @@ int main()
             arr[i] = tmp;
         }
     }
+    cout << count << endl;
+}
 
-    cout << "\n after selection sort\n";
-    for (int i = 0; i < n; i++)
+int main()
+{
+
+    int arr[] = {2, 1, 7, 9, 5};
+    int s = sizeof(arr) / sizeof(arr[0]);
+
+    for (int i = 0; i < s; i++)
     {
         cout << arr[i] << "\t";
     }
+    cout << "\n";
+
+    selection(arr, s);
+    cout << "\n after selection sort\n";
+    for (int i = 0; i < s; i++)
+    {
+        cout << arr[i] << "\t";
+    }
+    return 0;
 }
