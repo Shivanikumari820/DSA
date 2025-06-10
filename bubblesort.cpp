@@ -1,3 +1,11 @@
+// Approch= Subtract and conqurer method 
+// this is structerd and value based 
+//space complexity= o(n)
+// time complexity
+// best case = o(n)
+// average case = o(n^2)
+// worst case = o(n^2)
+
 #include <iostream>
 using namespace std;
 

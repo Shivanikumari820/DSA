@@ -1,3 +1,11 @@
+// OUICK SORT is used to solve complex problem and it is SLOWER THAN MERGE SORT
+// THE TIME complexity IN average CASE ,  WORST CASE ,BEST CASE IS ALWAYS = Same,   Time complexity = O(nlogn)
+// space  complexity = is higher than Quick sort because it take extra array
+// APPROCH = DIVIDE AND CONQURER METHOD
+// INPLACE NHI H BECAUCE EXTRA ARRAY LIYA HAI
+// IT IS STABLE,  This means that if two elements are equal, their relative order in the sorted output will be the same as their relative order in the original input. 
+// Merge krne k liye Two Pointer Approach use kiya jata h 
+
 #include <iostream>
 using namespace std;
 
@@ -44,10 +52,10 @@ int part(int arr[], int low, int high)
 // Recursive Quick Sort function
 void qksort(int arr[], int low, int high)
 {
-    int pvt;
+   
     if (low < high)
     {
-        pvt = part(arr, low, high); // partition the array
+        int pvt = part(arr, low, high); // partition the array
         qksort(arr, low, pvt - 1);  // sort left part , isme low to vhi rhega but jo high hoga vo pivot wale k 1 pich wala hoga na 
         qksort(arr, pvt + 1, high); // sort right part , or isme low= me pivot k just next wala or high to high hi rhega
     }
