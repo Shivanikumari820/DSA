@@ -36,6 +36,34 @@
 //     table(n);
 
 
+//Fibonacci series --->>
+
+// #include <iostream>
+// using namespace std;
+
+// int fibonacci(int n) {
+//     if (n == 0)
+//         return 0;
+//     else if (n == 1)
+//         return 1;
+//     else
+//         return fibonacci(n - 1) + fibonacci(n - 2);
+// }
+
+// int main() {
+//     int n;
+//     cout << "Enter number of terms: ";
+//     cin >> n;
+
+//     cout << "Fibonacci Series: ";
+//     for (int i = 0; i < n; i++) {
+//         cout << fibonacci(i) << " ";
+//     }
+
+//     return 0;
+// }
+
+
 
 //Print Power of any number using recursion  --->>
 // double power (double base, int exponent){
@@ -76,7 +104,7 @@
 // }
 
 
-// sum of n number 
+// sum of n number ----->
 // #include <iostream>
 // using namespace std;
 // int sum(int n ){
@@ -94,7 +122,8 @@
 //  cout<<sum(n);
 // }
 
-// convert decimal to binary
+// convert decimal to binary ---->>
+
 // #include <iostream>
 // using namespace std;
 // int binary(int d ){
@@ -115,7 +144,8 @@
 // (binary % 10 + 2 * binaryToDecimal(binary / 10)
 
 
-// sum of array
+// sum of array ----->>
+
 // #include <iostream>
 // using namespace std;
 // int sum(int a[],int n ){
@@ -133,21 +163,23 @@
 
 
 
-#include <bits/stdc++.h>
-using namespace std;
+// Reverse a string recursively  ---->>
 
-string stringReverse(string str) {
-    if (str.size() == 0) {
-        return "";
-    } else {
-        return stringReverse(str.substr(1)) + str[0];
-    }
-}
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main() {
-    string str;
-    cout << "Enter string: ";
-    cin >> str; 
-    cout << "Reversed string: " << stringReverse(str);
-    return 0;
-}
+// string stringReverse(string str) {
+//     if (str.size() == 0) {
+//         return "";
+//     } else {
+//         return stringReverse(str.substr(1)) + str[0];
+//     }
+// }
+
+// int main() {
+//     string str;
+//     cout << "Enter string: ";
+//     cin >> str; 
+//     cout << "Reversed string: " << stringReverse(str);
+//     return 0;
+// }

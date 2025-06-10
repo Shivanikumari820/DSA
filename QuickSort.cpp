@@ -1,10 +1,12 @@
 // OUICK SORT is used to solve complex problem and it is SLOWER THAN MERGE SORT
-// THE TIME complexity IN average CASE ,  WORST CASE ,BEST CASE IS ALWAYS = Same,   Time complexity = O(nlogn)
-// space  complexity = is higher than Quick sort because it take extra array
+// time complexity-nlog(n) best ,average // worst case- o(n2)
+// space complexity- 0(n) = is higher than Quick sort because it take extra array
 // APPROCH = DIVIDE AND CONQURER METHOD
-// INPLACE NHI H BECAUCE EXTRA ARRAY LIYA HAI
-// IT IS STABLE,  This means that if two elements are equal, their relative order in the sorted output will be the same as their relative order in the original input. 
-// Merge krne k liye Two Pointer Approach use kiya jata h 
+// INPLACE  H BECAUCE EXTRA ARRAY LIYA HAI
+// stable- no  Example:
+// example :Consider an unsorted array [5, 2, 8, 5, 9]. If the pivot is 5, and during partitioning, the element 5 at index 0 is swapped with the 5 at index 3, their relative order is changed even though they have the same value. 
+// Quick sort m Two Pointer Approach use kiya jata h before sorting jb  pivot element milta h
+
 
 #include <iostream>
 using namespace std;

@@ -9,8 +9,10 @@
 using namespace std; 
 
 
-void insertionSort(int arr[], int s, int &count) {
+void insertionSort(int arr[], int s) {
+    int count =0;
     for(int i = 1; i < s; i++) {
+
         int mins = i;
         while(mins > 0 && arr[mins] < arr[mins - 1]) {
             int temp = arr[mins];
@@ -20,10 +22,11 @@ void insertionSort(int arr[], int s, int &count) {
             count++;
         }
     }
+     cout << "\nCounter Hit: " << count << endl;
 }
 
 int main() {
-    int arr[] = {3, 4, 5, 6, 7};
+    int arr[] = {3, 4, 5, 6, 7,2};
     int s = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Before applying insertion sort:\t";
@@ -33,14 +36,12 @@ int main() {
     cout << endl;
 
     int count = 0;
-    insertionSort(arr, s, count);
+    insertionSort(arr, s);
 
     cout << "After applying insertion sort:\t";
     for(int i = 0; i < s; i++) {
         cout << arr[i] << "\t";
     }
-
-    cout << "\nCounter Hit: " << count << endl;
 
     return 0;
 }
