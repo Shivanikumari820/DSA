@@ -35,7 +35,6 @@ int main() {
     }
     cout << endl;
 
-    int count = 0;
     insertionSort(arr, s);
 
     cout << "After applying insertion sort:\t";

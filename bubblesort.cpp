@@ -19,6 +19,7 @@ void bubbles(int arr[], int s)
 
         for (int j = 0; j < s - i - 1; j++)
         {
+          
             count++;
             if (arr[j] > arr[j + 1])
             {

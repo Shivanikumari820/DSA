@@ -22,7 +22,7 @@ void selection(int arr[], int s)
     for (int i = 0; i < s - 1; i++)
     {
         int chotu = i;
-        count++;
+      
         for (j = i + 1; j < s; j++)
         {
             if (arr[j] < arr[chotu])
@@ -36,6 +36,7 @@ void selection(int arr[], int s)
             tmp = arr[chotu];
             arr[chotu] = arr[i];
             arr[i] = tmp;
+              count++;
         }
     }
     cout << count << endl;

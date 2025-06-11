@@ -1,6 +1,6 @@
 // OUICK SORT is used to solve complex problem and it is SLOWER THAN MERGE SORT
 // time complexity-nlog(n) best ,average // worst case- o(n2)
-// space complexity- 0(n) = is higher than Quick sort because it take extra array
+// space complexity is less than the MERGE sort because it take extra array
 // APPROCH = DIVIDE AND CONQURER METHOD
 // INPLACE  H BECAUCE EXTRA ARRAY LIYA HAI
 // stable- no  Example:
