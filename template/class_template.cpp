@@ -1,3 +1,18 @@
+/*Class Template :-
+A class template lets you create a generic class that can work with any data type.
+Just like function templates, but for classes (like stack, array, etc.).
+
+SYntax:-
+template <class T>
+class ClassName {
+    T data;
+public:
+    void set(T value) { data = value; }
+    T get() { return data; }
+}; 
+*/
+
+
 // #include<iostream>
 // using namespace std;
 // template <class obj>
