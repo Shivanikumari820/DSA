@@ -12,6 +12,7 @@ int main() {
     cout << "4. First char: " << s.front() << endl;         // H
     cout << "5. Last char: " << s.back() << endl;           // 3
 
+
     s.append("456");
     cout << "6. After append: " << s << endl;               // Hello123456
 
