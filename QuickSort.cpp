@@ -63,6 +63,7 @@ void qksort(int arr[], int low, int high)
     }
 }
 
+
 int main()
 {
     int n;
@@ -83,7 +84,7 @@ int main()
         cout << arr[i] << " ";
     }
 
-    // Apply Quick Sort
+    // Apply Quick Sort 
     qksort(arr, 0, n - 1);
 
     cout << "\n\nAfter sorting:\n";
@@ -94,3 +95,4 @@ int main()
 
     return 0;
 }
+
