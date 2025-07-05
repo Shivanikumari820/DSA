@@ -59,7 +59,7 @@ int main()
         }
     }
 
-    cout << "first output: " << b << endl;
+    cout << "first output: " << b << endl; 
 
     // Find longest word
     for (int i = 0; i < s.size(); i++)
