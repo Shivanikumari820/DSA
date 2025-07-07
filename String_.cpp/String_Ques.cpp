@@ -37,51 +37,94 @@
 // }
 
 // Ques = largest string in a sentence
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main()
+// {
+//     string s = " What is programming? ";
+//     string b, str;
+//     cout << s << endl;
+
+//     // First word
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         if (s[i] != ' ')
+//         {
+//             b.push_back(s[i]); // Append non-space characters to b
+//         }
+//         else
+//         {
+//             break;
+//         }
+//     }
+
+//     cout << "first output: " << b << endl; 
+
+//     // Find longest word
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         if (s[i] != ' ')
+//         {
+//             str.push_back(s[i]); // Build the current word
+//         }
+
+//         if (s[i] == ' ' || i + 1 == s.size()) // End of word or end of string
+//         {
+//             if (str.size() > b.size())
+//             {
+//                 b = str;
+//             }
+//             str.clear(); // Clear for next word
+//         }
+
+//         cout << "final output: " << b << endl;
+//     }
+// }
+
+//  ############## Ques- Find the string is isomorphic or not  ###############
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    string s = " What is programming? ";
-    string b, str;
-    cout << s << endl;
-
-    // First word
-    for (int i = 0; i < s.size(); i++)
-    {
-        if (s[i] != ' ')
-        {
-            b.push_back(s[i]); // Append non-space characters to b
-        }
-        else
-        {
-            break;
-        }
+bool isomorphic(string s1, string s2) {
+    int n1[256] = {-1}, n2[256] = {-1};         //arrays of size 256 (for all ASCII characters).
+    
+    if (s1.size() != s2.size()) {
+        return false; // Strings with different lengths can't be isomorphic
     }
 
-    cout << "first output: " << b << endl; 
 
-    // Find longest word
-    for (int i = 0; i < s.size(); i++)
-    {
-        if (s[i] != ' ')
-        {
-            str.push_back(s[i]); // Build the current word
+    for (int i = 0; i < s1.size(); i++) {
+        if (n1[s1[i]] != n2[s2[i]]) {
+            return false;
         }
 
-        if (s[i] == ' ' || i + 1 == s.size()) // End of word or end of string
-        {
-            if (str.size() > b.size())
-            {
-                b = str;
-            }
-            str.clear(); // Clear for next word
-        }
-
-        cout << "final output: " << b << endl;
+        // Update the mapping
+        n1[s1[i]] = i + 1;
+        n2[s2[i]] = i + 1;
     }
+
+    return true;
 }
 
+int main() {
+   string s1, s2;
+
+    cout << "Enter first string: ";
+    cin >> s1;
+
+    cout << "Enter second string: ";
+    cin >> s2;
+
+    if (isomorphic(s1, s2)) {
+        cout << "The strings are isomorphic." << endl;
+    } else {
+        cout << "The strings are not isomorphic." << endl;
+    }
+
+    return 0;
+}
 
 ////// ############# Q.1 Reverse the String ###############
 
