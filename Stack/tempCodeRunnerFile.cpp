@@ -1,4 +1,4 @@
-// // Ques. Reverse a string using stack
+// Ques. Reverse a string using stack
 // #include <bits/stdc++.h>
 // using namespace std;
 
@@ -41,13 +41,14 @@
 
 //     for (int i = 0; i < expr.length(); i++) {
 //         char c = expr[i];                                   // Current character
-
+       
 //         if (c == '(' || c == '{' || c == '[') {               // // If it's an opening bracket, push it into the stack
 //             s.push(c);
 //         }
-
+       
 //         else if (c == ')' || c == '}' || c == ']') {               // If it's a closing bracket
 
+           
 //             if (s.empty())                             // If stack is empty, it means there's no matching opening bracket  ,So, the expression is invalid
 //                 return false;
 
@@ -75,89 +76,6 @@
 //         cout << "The expression is Balanced " << endl;
 //     } else {
 //         cout << "The expression is Not Balanced" << endl;
-//     }
-
-//     return 0;
-// }
-
-//  Ques. Write a program to find a minimum value in stack
-
-#include <bits/stdc++.h>
-using namespace std;
-
-int findMin(stack<int> s) {
-
-    if (s.empty()) {
-        cout << "Stack is empty" << endl;
-        return -1;                           // Stack khali hai, toh minimum value nahi hai
-    }
-    else if (s.size() == 1) {
-        return s.top();                      //age sirf ek hi element hai, toh wahi minimum hai
-    }
-
-    int min = s.top();
-    
-    while (!s.empty()) {
-        if (s.top() < min) {
-            min = s.top();
-        }
-        s.pop();
-    }
-
-    return min;
-}
-
-int main(){
-
-    stack<int> s;
-    s.push(5);
-    s.push(2);
-    s.push(8);
-    s.push(1);
-
- cout << "Minimum value in stack: " << findMin(s) << endl;
-
-    return 0;
-}
-
-// Ques :- Write a program to print sky is blue = blue is sky by using stack or any other sentence to reverse them
-
-// #include <iostream>
-// #include <stack>
-// using namespace std;
-
-// int main()
-// {
-//     string str;
-//     cout << "Enter a sentence: ";
-//     getline(cin, str);
-
-//     stack<string> st;
-
-//     string word = "";
-//     for (int i = 0; i <= str.length(); i++)
-//     {
-
-//         if (i < str.length() && str[i] != ' ')
-//         {
-//             word += str[i];                    // word banate raho 
-//         }
-//         else
-//         {
-//             if (word != "")                
-//             {
-//                 st.push(word); // space ya end pe push karo
-//                 word = "";     // firse empty karo next word ke liye
-//             }
-//         }
-//     }
-
-//     cout << "Reversed sentence: ";
-//     while (!st.empty())
-//     {
-//         cout << st.top();
-//         st.pop();
-//         cout << " ";
 //     }
 
 //     return 0;
