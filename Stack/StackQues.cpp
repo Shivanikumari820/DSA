@@ -129,6 +129,9 @@ int main(){
 // int main()
 // {
 //     string str;
+
+
+
 //     cout << "Enter a sentence: ";
 //     getline(cin, str);
 
@@ -162,3 +165,48 @@ int main(){
 
 //     return 0;
 // }
+
+
+
+//find second largest number
+#include <iostream>
+#include <stack>        
+using namespace std;
+int findSecondLargest(stack<int> s) {
+    if (s.size() < 2) {
+        cout << "Not enough elements in the stack." << endl;
+        return -1; // Not enough elements to find second largest
+    }
+
+    int largest = INT_MIN;
+    int secondLargest = INT_MIN;
+
+    while (!s.empty()) {
+        int current = s.top();
+        s.pop();
+
+        if (current > largest) {
+            secondLargest = largest; // Update second largest
+            largest = current;        // Update largest
+        } else if (current > secondLargest && current < largest) {
+            secondLargest = current;  // Update second largest if current is between
+        }
+    }
+
+    return secondLargest;
+}
+int main() {
+    stack<int> s;
+    s.push(5);
+    s.push(2);
+    s.push(8);
+    s.push(1);
+    s.push(3);
+
+    int secondLargest = findSecondLargest(s);
+    if (secondLargest != -1) {
+        cout << "Second largest number in the stack: " << secondLargest << endl;
+    }
+
+    return 0;
+}
