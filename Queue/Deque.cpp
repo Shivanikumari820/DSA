@@ -44,4 +44,4 @@ int main() {
 // deque support pop_back or not = Yes, a deque supports the `pop_back` operation, which allows you to remove elements from the back of the deque efficiently. This is a standard operation provided by the deque data structure.
 // deque support pop_front or not = Yes, a deque supports the `pop_front` operation, which allows you to remove elements from the front of the deque efficiently. This is one of the key operations that makes deques versatile for managing collections of items.
 // deque support front or not = Yes, a deque supports the `front` operation, which allows you to access the first element of the deque efficiently. This is useful for retrieving or modifying the element at the front without removing it.
-
+// deque support back or not = Yes, a deque supports the `back` operation, which allows you to access the last element of the deque efficiently. This is useful for retrieving or modifying the element at the back without removing it.
