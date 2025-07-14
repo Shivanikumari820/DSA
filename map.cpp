@@ -96,7 +96,8 @@
 //     return 0;
 // }
 
-//pair me value store krni h jese A key me DSA and B key me java and C me DSA and D m DSA and E m Django 
+
+//Frequency count krna by map method --->>
 #include <iostream>
 #include <map> 
 using namespace std;
