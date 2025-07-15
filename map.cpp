@@ -123,7 +123,7 @@ int main() {
         cout << p.first << " : " << p.second << endl; 
     }
 
-// Find the course with the maximum count
+// Finding the course with the maximum frequency
     string maxCourse;
     int Count = 0;
     for (auto p : m) {
@@ -137,6 +137,7 @@ int main() {
 
     return 0;
 }
+
 
 
   
