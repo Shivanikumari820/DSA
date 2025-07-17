@@ -51,7 +51,7 @@ int main()
 }
 
 
-// erase () function is used to delete all same data in set
+// erase () function is used to delete all same data in set 
 // we used erase with find function to delete specific element because find returns an iterator to the element, which can be passed to erase.
 
 
@@ -86,4 +86,5 @@ int main()
 
 //     return 0;
 // }
+
 
