@@ -487,44 +487,46 @@ Then: V → no next → total = total + 5 = 14
 
 
 // consecutive numbers in C++ ------------------------------------------------------------------------------------------------------------
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
 
-bool isConsecutive(vector<int> arr) {
-    sort(arr.begin(), arr.end());  // Step 1: sort the array
+// bool isConsecutive(vector<int> arr) {
+//     sort(arr.begin(), arr.end());  // Step 1: sort the array
 
-    for (int i = 0; i < arr.size() - 1; i++) {
-        if (arr[i] == arr[i + 1]) {
-            return false;  // duplicate found
-        }
-        if (arr[i + 1] - arr[i] != 1) {
-            return false;  // not consecutive
-        }
-    }
+//     for (int i = 0; i < arr.size() - 1; i++) {
+//         if (arr[i] == arr[i + 1]) {
+//             return false;  // duplicate found
+//         }
+//         if (arr[i + 1] - arr[i] != 1) {
+//             return false;  // not consecutive
+//         }
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
-int main() {
-    vector<int> arr;
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
+// int main() {
+//     vector<int> arr;
+//     int n;
+//     cout << "Enter number of elements: ";
+//     cin >> n;
 
-    cout << "Enter numbers:\n";
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        arr.push_back(x);
-    }
+//     cout << "Enter numbers:\n";
+//     for (int i = 0; i < n; i++) {
+//         int x;
+//         cin >> x;
+//         arr.push_back(x);
+//     }
 
-    if (isConsecutive(arr)) {
-        cout << "Yes, the elements can form a consecutive sequence.\n";
-    } else {
-        cout << "No, the elements cannot form a consecutive sequence.\n";
-    }
+//     if (isConsecutive(arr)) {
+//         cout << "Yes, the elements can form a consecutive sequence.\n";
+//     } else {
+//         cout << "No, the elements cannot form a consecutive sequence.\n";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+
+
