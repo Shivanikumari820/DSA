@@ -1,4 +1,4 @@
-// Two Sum Problem in C++ ------------------------------------------------------------------------------------------------------------
+// Q.1 Two Sum Problem in C++ ------------------------------------------------------------------------------------------------------------
 
 // #include <iostream>
 // #include <vector>
@@ -31,9 +31,10 @@
 //     {
 //         cout << "No match";
 //     }
+   
 // }
 
-// Remove duplicates from an array using set in C++ ---------------------------------------------------------------------------------------------
+//Q.2 Remove duplicates from an array using set in C++ ---------------------------------------------------------------------------------------------
 // #include <iostream>
 // #include <vector>
 // #include <set>
@@ -44,7 +45,8 @@
 //     cin >> n;  // Number of elements
 
 //     vector<int> arr(n);
-//     for (int i = 0; i < n; i++) cin >> arr[i];  // Input values
+//     for (int i = 0; i < n; i++) {
+//        cin >> arr[i]; }  
 
 //     set<int> s;
 //     for (int i = 0; i < n; i++) {
@@ -53,14 +55,14 @@
 
 //     // Print unique elements
 //     cout << "After removing duplicates:\n";
-//     for (int x : s) {
+//     for (auto x : s) {
 //         cout << x << " ";
 //     }
 
 //     return 0;
 // }
 
-// Roman to integer conversion in C++ ---------------------------------------------------------------------------------------------------------
+// Q.3 Roman to integer conversion in C++ ---------------------------------------------------------------------------------------------------------
 // #include <iostream>
 // #include <unordered_map>
 // using namespace std;
@@ -140,7 +142,7 @@ Then: V → no next → total = total + 5 = 14
 //     return 0;
 // }
 
-// Valid Parentheses in C++ ------------------------------------------------------------------------------------------------------------
+//Q.4 Valid Parentheses in C++ ------------------------------------------------------------------------------------------------------------
 //  #include <iostream>
 //  #include <stack>
 //  using namespace std;
@@ -181,7 +183,7 @@ Then: V → no next → total = total + 5 = 14
 //     return 0;
 // }
 
-// maximum subarray sum in C++ ------------------------------------------------------------------------------------------------------------
+// Q.6  Maximum Size Subarray Sum  ----------------------------->>
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -214,7 +216,7 @@ Then: V → no next → total = total + 5 = 14
 //     return 0;
 // }
 
-// Minimum Size Subarray Sum in C++ ------------------------------------------------------------------------------------------------------------
+//  Q.7  Split an array into two equal Sum subarrays  --------------------------->>
 //  #include <iostream>
 //  #include <vector>
 //  using namespace std;
@@ -314,7 +316,7 @@ Then: V → no next → total = total + 5 = 14
 // }
 
 
-// Print second largest element in an array in C++ ------------------------------------------------------------------------------------------------------------
+// Q.13  Find second largest number in an Array  --------------------------->>
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -353,7 +355,7 @@ Then: V → no next → total = total + 5 = 14
 // }
 
 
-// Isomorphic Strings in C++ ------------------------------------------------------------------------------------------------------------
+// Q.14 Isomorphic Strings in C++ ------------------------------------------------------------------------------------------------------------
 // #include <iostream>
 // #include <string>
 // using namespace std;
@@ -393,7 +395,7 @@ Then: V → no next → total = total + 5 = 14
 
 
 
-// Best Time to Buy and Sell Stock in C++ ------------------------------------------------------------------------------------------------------------
+// Q.18  Best Time to Buy and Sell Stock ------->>>
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -435,8 +437,41 @@ Then: V → no next → total = total + 5 = 14
 //     return 0;
 // }
 
+//  Q.11 Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly.
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
 
-// Find array is the subset of another array in C++ ------------------------------------------------------------------------------------------------------------
+// void findMinMaxSum(vector<int> a) {
+//     sort(a.begin(), a.end());  // Sort the array
+
+//     int minSum = 0, maxSum = 0;
+
+//     // Add first 4 elements for minSum
+//     for (int i = 0; i < 4; i++) {
+//         minSum += a[i];
+//     }
+
+//     // Add last 4 elements for maxSum
+//     for (int i = 1; i < 5; i++) {
+//         maxSum += a[i];
+//     }
+
+//     cout << "Minimum sum = " << minSum << endl;
+//     cout << "Maximum sum = " << maxSum << endl;
+// }
+
+// int main() {
+//     vector<int> arr = {1, 3, 5, 7, 9};
+//     findMinMaxSum(arr);
+
+
+//     return 0;
+// }
+
+
+// Q.12  Find Array is Subset of Another Array  ------------------->>
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -485,7 +520,7 @@ Then: V → no next → total = total + 5 = 14
 //     return 0;
 // }
 
-
+// Q.15 Check whether numbers in a vector can be rearranged so that each number appears exactly once in a consecutive list of numbers. Return true otherwise false
 // consecutive numbers in C++ ------------------------------------------------------------------------------------------------------------
 // #include <iostream>
 // #include <vector>
@@ -530,3 +565,115 @@ Then: V → no next → total = total + 5 = 14
 // }
 
 
+//Q.19 Longest Substring Without Repeating Characters
+// #include <iostream>
+// using namespace std;
+
+// int longestUniqueSubstring(string s) {
+//     int maxLength = 0;
+
+//     for (int i = 0; i < s.length(); i++) {
+//         string temp = ""; // yeh string banayenge unique characters ke liye
+
+//         for (int j = i; j < s.length(); j++) {
+//             char ch = s[j];
+
+//             // agar character temp me already hai to break karo
+//             if (temp.find(ch) != -1) {
+//                 break;
+//             }
+
+//             temp += ch; // unique character add karo
+//         }
+
+//         // max length update karo
+//         if (temp.length() > maxLength) {
+//             maxLength = temp.length();
+//         }
+//     }
+
+//     return maxLength;
+// }
+
+// int main() {
+//     string str;
+//     cout << "Enter string: ";
+//     cin >> str;
+
+//     int result = longestUniqueSubstring(str);
+//     cout << "Longest unique substring length: " << result << endl;
+
+//     return 0;
+// }
+
+
+// Q.16 How to make minimum number of coins to make a Target/Amount
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int f(vector<int>& c, int t) {
+//     sort(c.begin(), c.end(), greater<int>());  // Bade coin se start
+//     int count = 0;
+
+//     for (int i = 0; i < c.size(); i++) {
+//         while (t >= c[i]) {
+//             t -= c[i];  // coin use karo
+//             count++;      // count badhao
+//         }
+//     }
+
+//     if (t == 0)
+//         return count;
+//     return -1;  // agar target nahi ban paya
+// }
+
+// int main() {
+//     vector<int> c = {1, 5, 6, 9};  // coin values
+//     int t = 11;                    // target
+
+//     int ans = f(c, t);
+
+//     if (ans != -1)
+//         cout << "Min coins: " << ans;
+//     else
+//         cout << "Not possible";
+
+//     return 0;
+// }
+
+/*Q.20 Number of 1 Bits
+Write a function that takes the binary representation of a positive integer and returns the number of 
+set bits
+ it has (also known as the Hamming weight).   */
+
+// #include <iostream>
+// using namespace std;
+
+// // Function to count set bits
+// int countSetBits(int n) {
+//     int count = 0;
+
+//     while (n > 0) {
+//         if (n % 2 == 1) {
+//             count++;          // If last bit is 1, increase count
+//         }
+//         n = n / 2;            // Move to next bit
+//     }
+
+//     return count;
+// }
+
+// int main() {
+//     int num;
+
+//     cout << "Enter a positive number: ";
+//     cin >> num;
+
+//     int result = countSetBits(num);
+//     cout << "Number of set bits (1s in binary): " << result << endl;
+
+//     return 0;
+// }

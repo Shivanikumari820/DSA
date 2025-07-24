@@ -84,47 +84,47 @@
 
 //  ############## Ques- Find the string is isomorphic or not  ###############
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-bool isomorphic(string s1, string s2) {
-    int n1[256] = {-1}, n2[256] = {-1};         //arrays of size 256 (for all ASCII characters).
+// bool isomorphic(string s1, string s2) {
+//     int n1[256] = {-1}, n2[256] = {-1};         //arrays of size 256 (for all ASCII characters).
     
-    if (s1.size() != s2.size()) {
-        return false; // Strings with different lengths can't be isomorphic
-    }
+//     if (s1.size() != s2.size()) {
+//         return false; // Strings with different lengths can't be isomorphic
+//     }
 
 
-    for (int i = 0; i < s1.size(); i++) {
-        if (n1[s1[i]] != n2[s2[i]]) {
-            return false;
-        }
+//     for (int i = 0; i < s1.size(); i++) {
+//         if (n1[s1[i]] != n2[s2[i]]) {
+//             return false;
+//         }
 
-        // Update the mapping
-        n1[s1[i]] = i + 1;
-        n2[s2[i]] = i + 1;
-    }
+//         // Update the mapping
+//         n1[s1[i]] = i + 1;
+//         n2[s2[i]] = i + 1;
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
-int main() {
-   string s1, s2;
+// int main() {
+//    string s1, s2;
 
-    cout << "Enter first string: ";
-    cin >> s1;
+//     cout << "Enter first string: ";
+//     cin >> s1;
 
-    cout << "Enter second string: ";
-    cin >> s2;
+//     cout << "Enter second string: ";
+//     cin >> s2;
 
-    if (isomorphic(s1, s2)) {
-        cout << "The strings are isomorphic." << endl;
-    } else {
-        cout << "The strings are not isomorphic." << endl;
-    }
+//     if (isomorphic(s1, s2)) {
+//         cout << "The strings are isomorphic." << endl;
+//     } else {
+//         cout << "The strings are not isomorphic." << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 ////// ############# Q.1 Reverse the String ###############
 
