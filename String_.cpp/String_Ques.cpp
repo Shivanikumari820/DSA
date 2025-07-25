@@ -1,40 +1,3 @@
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// int main() {
-//     string s = "cybrom";
-//     for (int i = 0; i < s.size(); i++) {
-//         s[i] = s.at(i) + 1;                       // Using .at() to access each character
-//     }
-//     cout << s;
-//     return 0;
-// }
-
-// convert Cybrom into  cYBROM
-//  #include <iostream>
-//  using namespace std;
-
-// int main() {
-//     string s;
-//     cout << "Enter a string: ";
-//     cin >> s;
-
-//     for (int i = 0; i < s.length(); i++) {
-//         // If character is lowercase (a to z)
-//         if (s[i] >= 'a' && s[i] <= 'z') {
-//             s[i] = s[i] - ('a' - 'A');  // convert to uppercase
-//         }
-//         // If character is uppercase (A to Z)
-//         else if (s[i] >= 'A' && s[i] <= 'Z') {
-//             s[i] = s[i] + ('a' - 'A');  // convert to lowercase
-//         }
-//         // Other characters are left unchanged
-//     }
-
-//     cout << "Converted string: " << s << endl;
-
-//     return 0;
-// }
 
 // Ques = largest string in a sentence
 // #include <bits/stdc++.h>
@@ -131,54 +94,68 @@
 // #include<iostream>
 // using namespace std;
 // #include<string>
-// #include<algorithm>
+// #include<algorithm>  // although not used here, useful for std::reverse
+// int main() {
+//     string s = "Cybrom";  // Original string
+//     string s1;            // Reversed string store karne ke liye
+//     for (int i = s.size() - 1; i >= 0; i--) {
+//         s1 += s[i];  // har character ko ulta s1 me daal rahe ho
+//     }
+//     cout << s1;  // Output: morb y C
+// }
 
-// int main(){
-//   string s="Cybrom";
-//   string s1;
-//   for(int i=s.size()-1;i>=0;i--){
-//           s1+=s[i];
-//       }
-//   cout<<s1;
-// }
 
 ////// ############# Q.2 Anagram the String ###############
 
 // #include<iostream>
-// using namespace std;  
+// using namespace std;
 // #include<string>
-// int main(){
-//   string s1="listen";
-//   string s2="silent";
-//   if(s1.size()==s2.size()){
-//   int a[26]={0};
-//   for(int i=0;s1[i]!='\0';i++){
-//       a[s1[i]-'a']++;
-//   }
-//   for(int i=0;s2[i]!='\0';i++){
-//       a[s2[i]-'a']--;
-//   }
-//   bool t=true;
-//   for(int i=0;i<26;i++){
-//     if(a[i]!=0){
-//        t=false;
-//        break;
+
+// int main() {
+//     // Define two strings to compare
+//     string s1 = "listen";
+//     string s2 = "silent";
+
+//     // Step 1: Check if lengths are equal
+//     if (s1.size() == s2.size()) {
+        
+//         // Step 2: Create an array to count characters (for 26 lowercase letters)
+//         int a[26] = {0};
+
+//         // Step 3: Count frequency of characters in s1
+//         for (int i = 0; s1[i] != '\0'; i++) {
+//             a[s1[i] - 'a']++; // Increase count of that character
+//         }
+
+//         // Step 4: Subtract frequency using characters in s2
+//         for (int i = 0; s2[i] != '\0'; i++) {
+//             a[s2[i] - 'a']--; // Decrease count of that character
+//         }
+
+//         // Step 5: Check if all counts are 0
+//         bool t = true; // Assume it is an anagram
+//         for (int i = 0; i < 26; i++) {
+//             if (a[i] != 0) {  // If any count is not zero
+//                 t = false;    // Not an anagram
+//                 break;
+//             }
+//         }
+
+//         // Step 6: Final result
+//         if (t) {
+//             cout << "It is anagram";
+//         } else {
+//             cout << "It is not anagram";
+//         }
+
+//     } else {
+//         // If lengths are different, definitely not an anagram
+//         cout << "It is not anagram string";
 //     }
-//     else{
-//       t=true;
-//     }
-//   }
-//   if(t){
-//     cout<<"It is anagram";
-//   }
-//   else{
-//     cout<<"It is not anagram";
-//   }
+
+//     return 0;
 // }
-// else{
-//     cout<<"It is not anagram string";
-// }
-// }
+
 
 
 ////// ############# Q.3 Replace each letter with next lette in String ###############
@@ -218,20 +195,21 @@
 ////  ############ Q.5 Count the Number in String ################### 
 
 // #include<iostream>
-// using namespace std;
 // #include<string>
+// using namespace std;
 // int main(){
-//      string s="w3source from 2008";
-//      int sum=0,a;
-//      for(int i=0;s[i]!='\0';i++){
-//         // cout<<s[i]<<"\t";
-//       if(isdigit(s[i])){
-//          a=s[i]-'0';
-//         sum=sum+a;
-//       }
-//      }
-//      cout<<"The Sum of number in String :"<<sum;
-// }
+//     string s = "w3source from 2008";  // Mixed string
+//     int sum = 0, a;
+//     for (int i = 0; s[i] != '\0'; i++) {
+//         // Check if character is a digit
+//         if (isdigit(s[i])) {
+//             a = s[i] - '0';  // Convert char digit to int (e.g., '3' → 3)
+//             sum += a;
+//         }
+//     }
+//     cout << "The Sum of numbers in String : " << sum;
+// }
+
 
 
 //  ################ Q.7 Add Dash Between Two odd number in String ##############
@@ -239,17 +217,18 @@
 // #include<iostream>
 // using namespace std;
 // #include<string>
-// int main(){
-//   string s="1345789";
-//   string s2;
-//   for(int i=0;i<s.size();i++){
-//       s2+=s[i];
-//      if(s[i]%2!=0 && s[i+1]%2!=0){
-//         s2+='-';
-//      }
-//   }
-//   cout<<s2;
-// }
+// int main() {
+//     string s = "1345789";                           // input string of digits
+//     string s2;                                          // output string jisme hum dash insert karenge
+//     for (int i = 0; i < s.size(); i++) {
+//         s2 += s[i];                                      // har character ko s2 me add kar rahe hain
+//         if (s[i] % 2 != 0 && s[i + 1] % 2 != 0) {
+//             s2 += '-';      // dash insert kar diya
+//         }
+//     }
+//     cout << s2;
+// }
+
 
 //  ################ Q.8 Toggle cash String ##############
 
@@ -261,63 +240,40 @@
 //     string b;
 //     for(int i=0;i<a.size();i++){
 //           if(a[i]<98){
-//             b+=a[i]+32;
+//             b=a[i]+32;
 //           } 
 //           else{
-//             b+=a[i]-32;
+//             b=a[i]-32;
 //           }
 //     }
-//      cout<<b;
-//   }
-
-
-//  ##########Q.9 Convert the First letter of Each Word in String #############
-
-// #include<iostream>
-// using namespace std;
-// #include<string>
-// int main(){
-
-//     string s="cpp string exercies";
-//     string b;
-//     for(int i=0;i<s.size();i++){
-//         if(i==0){
-//           b+=s[i]-32;
-//         } 
-//        else if(s[i] == 32 ){
-//            b+=32;
-//           b+=s[i+1]-32; 
-//           i++;     
-//        }
-//        else{
-//           b+=s[i];
-//        }    
-//     }
 //     cout<<b;
-// }
-
+//     return 0;
+//  }
 
 
 //  ##########Q.9 Convert the First letter of Each Word in String #############
 
 // #include<iostream>
-// using namespace std;
 // #include<string>
-// int main(){
-    
-//       string s1="cpp string exercises";
-//       for(int i=0;i<s1.size();i++){
-//            if(i==0){
-//              s1[i]=s1[i]-32;
-//            }
-//            else if(s1[i]==' '){
-//               s1[i+1]=s1[i+1]-32;
-//            }
-//       }
-//       cout<<s1;
-// }
+// using namespace std;
+// int main() {
+//     string s = "cpp string exercies";
+//     string b;
+//     for (int i = 0; i < s.size(); i++) {
+//         if (i == 0 || s[i-1] == ' ') {           // // First character or character after space
+//             if (s[i] >= 'a' && s[i] <= 'z') {
+//                 b += s[i] - 32;                     // lowercase → uppercase
+//             } else {
+//                 b += s[i];                         // already uppercase or non-letter
+//             }
+//         } else {
+//             b += s[i];                                  // normal character
+//         }
+//     }
 
-
+//     cout << b;
+//     return 0;
+// }
 
 //  ##########Q.10 Count the word in given String #############
 
@@ -329,12 +285,12 @@
 //     int c=0;
 //    for(int i=0;i<s.size();i++){
 //       if(s[i]==' '){
-//         c+=1;
+//         c++;
 //       }
 //    }
-//    c+=1;
-//    cout<<"NUmber of words in string :"<<c;
-// }
+//    c++;
+//    cout<<"NUmber of words in string :"<<c;
+// }
 
 
 //  #################### Missing Value Find in Vector array##########################
@@ -344,12 +300,10 @@
 // #include<vector>
 // int main(){
 //   vector<int>v={1,2,3,5,6,7};
-//   int a;
    
 //   for(int i=1;i<v.size();i++){
-//       a=v[i]-v[i-1];
-//       if(a!=1){
+//      if(v[i]-v[i-1]!=1){
 //         cout<<"Missing number is "<<v[i]-1<<endl;
-//       }       
-// }
-// }
+//       }
+//     }
+// }
