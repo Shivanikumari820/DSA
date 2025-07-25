@@ -6,10 +6,12 @@
 
 // vector<int> twoSum(vector<int> a, int target)
 // {
-//     for (int i = 0; i < a.size(); i++)
-//         for (int j = i + 1; j < a.size(); j++)
+//     for (int i = 0; i < a.size(); i++){
+//         for (int j = i + 1; j < a.size(); j++){
 //             if (a[i] + a[j] == target)
 //                 return {i, j};
+//         }
+//     }
 //     return {};
 // }
 
@@ -18,19 +20,17 @@
 //     int n, t;
 //     cin >> n;
 //     vector<int> a(n);
-//     for (int i = 0; i < n; i++)
-//         cin >> a[i];
+//     for (int i = 0; i < n; i++){
+//         cin >> a[i];}
 //     cin >> t;
 
-//     vector<int> ans = twoSum(a, t);
-//     if (ans.size() > 0)
-//     {
-//         cout << ans[0] << " " << ans[1];
-//     }
-//     else
-//     {
-//         cout << "No match";
-//     }
+//     vector<int>ans= twoSum(a, t);
+//   for(auto i:ans) {
+//     cout<<i<<" ";
+// }
+
+
+// return 0;
    
 // }
 
@@ -181,6 +181,7 @@ Then: V → no next → total = total + 5 = 14
 //         cout << "Brackets are NOT valid.\n";
 
 //     return 0;
+   
 // }
 
 // Q.6  Maximum Size Subarray Sum  ----------------------------->>
@@ -341,15 +342,16 @@ Then: V → no next → total = total + 5 = 14
 // {
 //     vector<int> arr = {4, 2, 7, 7, 5};
 
-//     int result = findSecondLargest(arr);
-//     if (result == -1)
-//     {
-//         cout << "No second largest element exists.\n";
-//     }
-//     else
-//     {
-//         cout << "Second largest number is: " << result << endl;
-//     }
+//     cout<<findSecondLargest(arr)
+    // int result = findSecondLargest(arr);
+    // if (result == -1)
+    // {
+    //     cout << "No second largest element exists.\n";
+    // }
+    // else
+    // {
+    //     cout << "Second largest number is: " << result << endl;
+    // }
 
 //     return 0;
 // }
@@ -421,19 +423,21 @@ Then: V → no next → total = total + 5 = 14
 // }
 
 // int main() {
-//     int n;
-//     cout << "Enter number of days: ";
-//     cin >> n;
+//     // int n;
+//     // cout << "Enter number of days: ";
+//     // cin >> n;
 
-//     vector<int> prices(n);
-//     cout << "Enter prices:\n";
-//     for (int i = 0; i < n; i++) {
-//         cin >> prices[i];
-//     }
+//     // vector<int> prices(n);
+//     // cout << "Enter prices:\n";
+//     // for (int i = 0; i < n; i++) {
+//     //     cin >> prices[i];
+//     // }
 
-//     int result = maxProfit(prices);
-//     cout << "Maximum Profit: " << result << endl;
+//     // int result = maxProfit(prices);
+//     // cout << "Maximum Profit: " << result << endl;
 
+//     vector<int>prices = {2,4,5,1,6};
+//     cout<<maxProfit(prices);
 //     return 0;
 // }
 
@@ -477,10 +481,10 @@ Then: V → no next → total = total + 5 = 14
 // using namespace std;
 
 // bool isSubset(vector<int>& A, vector<int>& B) {
-//     for (int i = 0; i < A.size(); i++) {
+//     for (int i = 0; i < B.size(); i++) {
 //         bool found = false;
-//         for (int j = 0; j < B.size(); j++) {
-//             if (A[i] == B[j]) {
+//         for (int j = 0; j < A.size(); j++) {
+//             if (B[i] == A[j]) {
 //                 found = true;
 //                 break; // Element found, no need to search more
 //             }
@@ -493,23 +497,26 @@ Then: V → no next → total = total + 5 = 14
 // }
 
 // int main() {
-//     int n, m;
+//     // int n, m;
 
-//     cout << "Enter size of array A: ";
-//     cin >> n;
-//     vector<int> A(n);
-//     cout << "Enter elements of array A:\n";
-//     for (int i = 0; i < n; i++) {
-//         cin >> A[i];
-//     }
+//     // cout << "Enter size of array A: ";
+//     // cin >> n;
+//     // vector<int> A(n);
+//     // cout << "Enter elements of array A:\n";
+//     // for (int i = 0; i < n; i++) {
+//     //     cin >> A[i];
+//     // }
 
-//     cout << "Enter size of array B: ";
-//     cin >> m;
-//     vector<int> B(m);
-//     cout << "Enter elements of array B:\n";
-//     for (int i = 0; i < m; i++) {
-//         cin >> B[i];
-//     }
+//     // cout << "Enter size of array B: ";
+//     // cin >> m;
+//     // vector<int> B(m);
+//     // cout << "Enter elements of array B:\n";
+//     // for (int i = 0; i < m; i++) {
+//     //     cin >> B[i];
+//     // }
+
+//     vector<int> A = {2,3,4,5,6};
+//     vector<int> B = {2};
 
 //     if (isSubset(A, B)) {
 //         cout << "Yes, B is a subset of A" << endl;
@@ -625,8 +632,8 @@ Then: V → no next → total = total + 5 = 14
 //         }
 //     }
 
-//     if (t == 0)
-//         return count;
+//     if (t == 0){
+//         return count;}
 //     return -1;  // agar target nahi ban paya
 // }
 
