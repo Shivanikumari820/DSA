@@ -10,5 +10,5 @@ int main(){
       }
    }
    c++;
-   cout<<"NUmber of words in string :"<<c;
- }
+   cout<<"NUmber of words in string:"<<c;
+}
