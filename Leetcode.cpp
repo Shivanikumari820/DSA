@@ -748,4 +748,19 @@ set bits
 // }
 
    
-
+//Ques- 441 
+class Solution {
+public:
+    int arrangeCoins(int n) {
+        long coins = n; // Store n in 'coins' as long to prevent overflow when n is very large
+        int rows = 0;  
+        
+        // Keep forming rows while we have enough coins for the next row
+        while (coins >= rows + 1) {
+            rows++;          // Build the next row (row number increases by 1)
+            coins -= rows;   // Subtract the coins used for this row from total coins
+        }
+        
+        return rows;
+    }
+};
