@@ -761,7 +761,7 @@ public:
             coins -= rows;   // Subtract the coins used for this row from total coins
         } 
          
-        return rows;
+        return rows; 
         
     } 
 };
