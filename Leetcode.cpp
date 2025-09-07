@@ -759,7 +759,7 @@ public:
         while (coins >= rows + 1) {
             rows++;          // Build the next row (row number increases by 1)
             coins -= rows;   // Subtract the coins used for this row from total coins
-        } 
+        }  
          
         return rows; 
           
