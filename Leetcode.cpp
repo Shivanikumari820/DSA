@@ -748,21 +748,54 @@ set bits
 // }
 
    
-//Ques- 441 
-class Solution {
-public:
-    int arrangeCoins(int n) {
-        long coins = n; // Store n in 'coins' as long to prevent overflow when n is very large
-        int rows = 0;  
+// //Ques- 441 
+// class Solution {
+// public:
+//     int arrangeCoins(int n) {
+//         long coins = n; // Store n in 'coins' as long to prevent overflow when n is very large
+//         int rows = 0;  
         
-        // Keep forming rows while we have enough coins for the next row
-        while (coins >= rows + 1) {
-            rows++;          // Build the next row (row number increases by 1)
-            coins -= rows;   // Subtract the coins used for this row from total coins
-        }  
+//         // Keep forming rows while we have enough coins for the next row
+//         while (coins >= rows + 1) {
+//             rows++;          // Build the next row (row number increases by 1)
+//             coins -= rows;   // Subtract the coins used for this row from total coins
+//         }  
          
-        return rows; 
+//         return rows; 
           
-    } 
-};
+//     } 
+// };
          
+//Question - 283 --> Move zeros to end of array
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// void moveZeroes(vector<int>& nums) {
+//     int pos = 0; // अगला non-zero कहाँ रखना है
+
+//     // Step 1: सारे non-zero आगे ले आओ
+//     for (int i = 0; i < nums.size(); i++) {
+//         if (nums[i] != 0) {
+//             nums[pos] = nums[i];
+//             pos++;
+//         }
+//     }
+
+//     // Step 2: बाकी जगह पर 0 डाल दो
+//     while (pos < nums.size()) {
+//         nums[pos] = 0;
+//         pos++;
+//     }
+// }
+
+// int main() {
+//     vector<int> nums = {0, 1, 0, 3, 12};
+
+//     moveZeroes(nums);
+
+//     // Output print
+//     for (int x : nums) {
+//         cout << x << " ";
+//     }
+//     return 0;
+// }
