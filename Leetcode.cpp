@@ -648,7 +648,7 @@ Then: V → no next → total = total + 5 = 14
 //     else
 //         cout << "Not possible";
 
-//     return 0;   
+//     return 0;          
 // }
 
 
