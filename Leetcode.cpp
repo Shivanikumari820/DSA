@@ -651,7 +651,7 @@ Then: V → no next → total = total + 5 = 14
 //     return 0;              
 // }              
                                   
-       
+           
 /*Q.20 Number of 1 Bits
 Write a function that takes the binary representation of a positive integer and returns the number of 
 set bits
