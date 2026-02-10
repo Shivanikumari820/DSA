@@ -649,7 +649,7 @@ Then: V → no next → total = total + 5 = 14
 //         cout << "Not possible";
     
 //     return 0;              
-// }              
+// }                  
                                   
               
 /*Q.20 Number of 1 Bits
